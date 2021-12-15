@@ -14,6 +14,9 @@ export class GokuComponent implements OnInit {
   public saludoGohan:string | undefined;
   public saludoGoten:string | undefined;
 
+  public toqueOfGohan:string | undefined;
+  public toqueOfGoten:string | undefined;
+
   public mensajeGohan(): void{
     this.saludoGohan = "Hola gohan";
   }
@@ -22,4 +25,11 @@ export class GokuComponent implements OnInit {
     this.saludoGoten = "Hola goten";
   }
 
+  public verToqueGohan($event: string):void{
+    this.toqueOfGohan=$event;
+  }
+
+  public verToqueGoten($event: string):void{
+    this.toqueOfGohan=$event;
+  }
 }

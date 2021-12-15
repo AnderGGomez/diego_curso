@@ -9,9 +9,13 @@
 </div>
 
 <div>
-    <app-gohan [mensajePadre]="saludoGohan"></app-gohan>
+    <app-gohan [mensajePadre]="saludoGohan" (toquePadre)="verToqueGohan($event)"></app-gohan>
 </div>
 
 <div>
-    <app-goten [mensajePadre]="saludoGoten"></app-goten>
+    <app-goten [mensajePadre]="saludoGoten"  (toquePadre)="verToqueGoten($event)"></app-goten>
 </div>
+
+<div>[padre:]{{toqueOfGohan}}</div>
+
+<div>[padre:]{{toqueOfGoten}}</div>

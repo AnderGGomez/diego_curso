@@ -1,5 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'stream';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-gohan',
@@ -14,6 +13,11 @@ export class GohanComponent implements OnInit {
   }
 
   @Input() mensajePadre : string | undefined;
-  @Output() toquePadre = new EventEmitter();
+  @Output() toquePadre = new EventEmitter<string>();
+
+  public enviarToque(msg: string):void{
+    this.toquePadre.emit(msg);
+    console.log(msg);
+  }
 
 }

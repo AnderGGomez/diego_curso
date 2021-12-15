@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-goten',
@@ -13,7 +14,11 @@ export class GotenComponent implements OnInit {
   }
 
   @Input() mensajePadre: string | undefined;
+  @Output() toquePadre = new EventEmitter<string>();
 
-
+  public enviarToque(msg: string):void{
+    this.toquePadre.emit(msg);
+    console.log(msg);
+  }
 
 }
