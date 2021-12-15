@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PadreComponent } from './padre.component';
+import { GohanComponent } from './gohan.component';
 
-describe('PadreComponent', () => {
-  let component: PadreComponent;
-  let fixture: ComponentFixture<PadreComponent>;
+describe('GohanComponent', () => {
+  let component: GohanComponent;
+  let fixture: ComponentFixture<GohanComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PadreComponent ]
+      declarations: [ GohanComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PadreComponent);
+    fixture = TestBed.createComponent(GohanComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

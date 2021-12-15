@@ -3,17 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PadreComponent } from './padre/padre.component';
-import { HijoComponent } from './hijo/hijo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
+import { GokuComponent } from './goku/goku.component';
+import { GohanComponent } from './gohan/gohan.component';
+import { GotenComponent } from './goten/goten.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PadreComponent,
-    HijoComponent,
+    GokuComponent,
+    GohanComponent,
+    GotenComponent,
   ],
   imports: [
     BrowserModule,
