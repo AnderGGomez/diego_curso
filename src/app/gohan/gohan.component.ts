@@ -12,12 +12,19 @@ export class GohanComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() mensajePadre : string | undefined;
-  @Output() toquePadre = new EventEmitter<string>();
+  @Input() mensajeOfGoku:string | undefined;
+  @Input() mensajeOfGoten:string | undefined;
+  @Output() mensajeGohanGoku = new EventEmitter<string>();
+  @Output() mensajeGohanGoten = new EventEmitter<string>();
 
-  public enviarToque(msg: string):void{
-    this.toquePadre.emit(msg);
-    console.log(msg);
+
+  mensajeToGoku(msg: string):void{
+    this.mensajeGohanGoku.emit(msg);
   }
+
+  mensajeToGoten(msg: string):void{
+    this.mensajeGohanGoten.emit(msg);
+  }
+
 
 }

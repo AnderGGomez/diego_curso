@@ -1,8 +1,14 @@
+<style>
+    .div-2 {
+    	background-color: #ABBAEA;
+    }
+</style>
 
-<div>
-    <p>[gohan]Mensaje padre : {{mensajePadre}}</p>
-</div>
+<div class="div-2">
+    <p>gohan space!</p> 
+    <p>[Goku says]: {{mensajeOfGoku}}</p>
+    <p>[Goten says]: {{mensajeOfGoten}}</p>
 
-<div>
-    <button (click)="enviarToque('toque de gohan')">toque gohan-padre</button>
-</div>
+    <button (click)="mensajeToGoku('Hola soy gohan.')">mensaje to goku</button>
+    <button (click)="mensajeToGoten('Goten mocoso')">mensaje to goten</button>
+</div><p>

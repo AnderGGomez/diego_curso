@@ -1,21 +1,32 @@
+<style>
+    .div-1 {
+        background-color: #49a12e;
+    }
+</style>
+
+<div class="div-1">
+    <div>
+        <button (click)="enviarMensajeGohan()">Mensaje a Gohan</button>
+    </div>
+    
+    
+    
+    <div>
+        <button (click)="enviarMensajeGoten()">Mensaje a Goten</button>
+    </div>
 <p>goku works!</p>
+<app-gohan [mensajeOfGoku]="mensajeGokuGohan" [mensajeOfGoten]="msgForGohan" (mensajeGohanGoku)="mensajeOfGohan($event)" (mensajeGohanGoten)="mensajeForGoten($event)"></app-gohan>
+<app-goten [mensajeOfGoku]="mensajeGokuGoten" [mensajeOfGohan]="msgForGoten" (mensajeGotenGoku)="mensajeOfGoten($event)" (mensajeGotenGohan)="mensajeForGohan($event)"></app-goten>
 
-<div>
-    <button (click)="mensajeGohan()">saludo gohan</button>
+
+
+
+    <div>
+        <p>[Gohan says]: {{msgOfGohan}}</p>
+    </div>
+
+    <div>
+        <p>[Goten says]: {{msgOfGoten}}</p>
+    </div>
+
 </div>
-
-<div>
-    <button (click)="mensajeGoten()">saludo goten</button>
-</div>
-
-<div>
-    <app-gohan [mensajePadre]="saludoGohan" (toquePadre)="verToqueGohan($event)"></app-gohan>
-</div>
-
-<div>
-    <app-goten [mensajePadre]="saludoGoten"  (toquePadre)="verToqueGoten($event)"></app-goten>
-</div>
-
-<div>[padre:]{{toqueOfGohan}}</div>
-
-<div>[padre:]{{toqueOfGoten}}</div>

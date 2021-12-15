@@ -9,7 +9,7 @@ const routes: Routes = [
   /**Asignamos las rutas de los componentes que creamos. */
   { path : 'goku', component: GokuComponent},
   { path : 'gohan', component: GohanComponent},
-  { path : 'goten', component: GotenComponent}
+  { path : 'goten', component: GotenComponent},
 ];
 
 @NgModule({

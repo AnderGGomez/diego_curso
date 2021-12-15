@@ -11,25 +11,37 @@ export class GokuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  public saludoGohan:string | undefined;
-  public saludoGoten:string | undefined;
 
-  public toqueOfGohan:string | undefined;
-  public toqueOfGoten:string | undefined;
+  public mensajeGokuGohan:string | undefined;
+  public mensajeGokuGoten:string | undefined;
 
-  public mensajeGohan(): void{
-    this.saludoGohan = "Hola gohan";
+  public msgOfGohan:  string | undefined;
+  public msgOfGoten:  string | undefined;
+  public msgForGoten: string | undefined;
+  public msgForGohan: string | undefined;
+
+  enviarMensajeGohan():void{
+    this.mensajeGokuGohan="hola gohan";
   }
 
-  public mensajeGoten(): void{
-    this.saludoGoten = "Hola goten";
+  enviarMensajeGoten():void{
+    this.mensajeGokuGoten="hola goten";
   }
 
-  public verToqueGohan($event: string):void{
-    this.toqueOfGohan=$event;
+  mensajeOfGohan($event: string): void{
+    this.msgOfGohan=$event;
   }
 
-  public verToqueGoten($event: string):void{
-    this.toqueOfGohan=$event;
+  mensajeOfGoten($event: string): void{
+    this.msgOfGoten=$event;
   }
+
+  mensajeForGoten($event: string): void{
+    this.msgForGoten=$event;
+  }
+
+  mensajeForGohan($event: string): void{
+    this.msgForGohan = $event;
+  }
+
 }

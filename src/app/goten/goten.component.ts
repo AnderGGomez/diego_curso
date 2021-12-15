@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-
 @Component({
   selector: 'app-goten',
   templateUrl: './goten.component.html',
@@ -9,16 +8,23 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class GotenComponent implements OnInit {
 
   constructor() { }
+  
 
   ngOnInit(): void {
   }
 
-  @Input() mensajePadre: string | undefined;
-  @Output() toquePadre = new EventEmitter<string>();
+  @Input() mensajeOfGoku  : string | undefined;
+  @Input() mensajeOfGohan : string | undefined;
 
-  public enviarToque(msg: string):void{
-    this.toquePadre.emit(msg);
-    console.log(msg);
+  @Output() mensajeGotenGoku  = new EventEmitter<string>();
+  @Output() mensajeGotenGohan = new EventEmitter<string>();
+
+  mensajeToGoku(msg: string):void{
+    this.mensajeGotenGoku.emit(msg);
+  }
+
+  mensajeToGohan(msg: string): void {
+    this.mensajeGotenGohan.emit(msg);
   }
 
 }
